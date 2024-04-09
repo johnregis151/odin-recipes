@@ -32,6 +32,8 @@ hr{
 
 body { 
     background-color: azure;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .img-and-desc {
@@ -74,8 +76,48 @@ main li,h2,p{
     max-width: 600px;
 }
 
+.top-container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #64a0f9ce;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.bi {
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #64a0f9;
+}
+
+.top-container div, .btn {
+    width: 80px;
+}
+
 @media (max-width: 800px) {
     img {
         max-width: 80%;
     }    
+    
+    .top-container {
+        flex-direction: column;
+    }
+
+    .top-container .btn {
+        margin-top: 20px;
+    }
+    
+    .top-container div {
+        display: none;
+    }
 }
